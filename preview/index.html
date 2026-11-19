@@ -47,7 +47,7 @@ a:focus-visible { outline: 1px solid currentColor; outline-offset: 5px; }
 }
 .wordmark { font-family: var(--serif); font-size: 19px; letter-spacing: -.035em; }
 .masthead nav { display: flex; align-items: center; gap: 34px; }
-.masthead nav a, .eyebrow, .section-index, .pub-year, .all-work, .text-link, figcaption, .back-top {
+.masthead nav a, .eyebrow, .section-index, .pub-year, .all-work, .text-link, .back-top {
   font-size: 10px;
   line-height: 1.4;
   letter-spacing: .12em;
@@ -59,10 +59,11 @@ a:focus-visible { outline: 1px solid currentColor; outline-offset: 5px; }
 .intro {
   position: relative;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(270px, 37%);
+  grid-template-columns: 1fr;
+  text-align: center;
   gap: 10%;
   align-items: center;
-  min-height: 680px;
+  min-height: 540px;
   padding: 84px 8% 100px 9%;
 }
 .intro-copy { align-self: center; padding-bottom: 15px; }
@@ -80,25 +81,13 @@ h1 {
 h1 em { font-weight: 400; }
 .intro-note {
   max-width: 320px;
-  margin: 0 0 35px;
+  margin: 0 auto 35px;
   color: #4c4b46;
   font-family: var(--serif);
   font-size: clamp(20px, 2vw, 26px);
   line-height: 1.4;
 }
 .text-link { display: inline-block; border-bottom: 1px solid #aaa79f; padding-bottom: 5px; }
-.portrait-frame { margin: 0; width: 100%; }
-.portrait-frame img {
-  display: block;
-  width: 100%;
-  height: min(42vw, 455px);
-  min-height: 300px;
-  object-fit: cover;
-  object-position: center 40%;
-  filter: grayscale(100%);
-}
-.portrait-frame figcaption { padding-top: 11px; color: var(--muted); letter-spacing: .1em; }
-.folio { position: absolute; bottom: 35px; right: 0; margin: 0; color: var(--muted); font-size: 10px; letter-spacing: .15em; }
 
 .section-rule { border-top: 1px solid var(--line); }
 .profile {
@@ -163,7 +152,7 @@ h1 em { font-weight: 400; }
 .back-top { color: var(--muted); }
 
 @media (min-width: 1500px) {
-  .intro { min-height: 740px; }
+  .intro { min-height: 600px; }
 }
 @media (max-width: 760px) {
   .masthead, main, .site-footer { width: min(100% - 40px, 560px); }
@@ -175,9 +164,6 @@ h1 em { font-weight: 400; }
   .eyebrow { margin-bottom: 32px; }
   h1 { font-size: clamp(74px, 18vw, 126px); margin-bottom: 24px; }
   .intro-note { max-width: 340px; }
-  .portrait-frame { width: min(82%, 380px); justify-self: end; }
-  .portrait-frame img { height: min(108vw, 440px); min-height: 0; }
-  .folio { bottom: 22px; }
   .profile, .work { padding: 54px 5% 60px; }
   .profile, .work-heading { grid-template-columns: 1fr; gap: 27px; }
   .section-index { margin-top: 0; }
@@ -222,11 +208,6 @@ h1 em { font-weight: 400; }
         <p class="intro-note">Researching efficient machine learning systems and their applications.</p>
         <a class="text-link" href="#about">A little more about me <span aria-hidden="true">↓</span></a>
       </div>
-      <figure class="portrait-frame">
-        <img src="../boyuan-photo.jpg" alt="Boyuan Zheng outdoors with mountains and a castle in the background" width="900" height="1100">
-        <figcaption>University of Michigan · CSE</figcaption>
-      </figure>
-      <p class="folio" aria-hidden="true"></p>
     </section>
 
     <section class="profile section-rule" id="about" aria-labelledby="about-title">
