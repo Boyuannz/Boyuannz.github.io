@@ -35,6 +35,7 @@ section + section { margin-top: clamp(46px,5.8vw,84px); }
 .papers { max-width: 950px; }
 .papers ul { padding-left: 1.2em; margin: 18px 0 0; }
 .papers li { padding-left: .35em; margin-bottom: 1em; }
+.authors { margin-top: .25em; font-size: .92em; line-height: 1.55; }
 .venue { color: #605f5b; font-size: .9em; }
 footer { border-top: 1px solid #e7e6e2; padding-block: 24px; font-size: 13px; }
 @media (max-width: 580px) {
@@ -67,18 +68,42 @@ footer { border-top: 1px solid #e7e6e2; padding-block: 24px; font-size: 13px; }
     <section class="papers" id="publications">
       <h2>Publications</h2>
       <ul>
-        <li><a href="https://arxiv.org/abs/2610.29378">Right On Q: Recovering Reasoning under Quantization via Self-Generated Trajectories</a>. <span class="venue">arXiv preprint, 2026.</span></li>
-        <li><a href="https://arxiv.org/abs/2610.23839">DiscoveryRSI: Recursively Learning to Discover Valuable Hypotheses</a>. <span class="venue">arXiv preprint, 2026.</span></li>
-        <li><a href="https://aclanthology.org/2026.emnlp-main.2415/">AtlasNLP: A Country-Aware Atlas of Dataset Representation in NLP</a>. <span class="venue">EMNLP 2026.</span></li>
-        <li><a href="https://arxiv.org/abs/2608.29528">MedCache: Efficient and Temporally Valid Memory for Longitudinal Clinical Agents</a>. <span class="venue">arXiv preprint, 2026.</span></li>
-        <li><a href="https://arxiv.org/abs/2608.12745">A Cloud-Edge System for Multimodal Clinical Screening in Resource-Constrained Rural Settings</a>. <span class="venue">Machine Learning for Healthcare · PMLR 340, 2026.</span></li>
-        <li><a href="https://arxiv.org/abs/2607.17454">Test-Time Scaling for World Action Models via Zero-Shot Geometric Evaluation</a>. <span class="venue">arXiv preprint, 2026.</span></li>
-        <li><a href="https://arxiv.org/abs/2606.10650">Dynamic Linear Attention</a>. <span class="venue">ICML 2026.</span></li>
-        <li><a href="https://arxiv.org/abs/2606.10537">Prefilling-dLLM: Predictive Prefilling for Long-Context Inference in Diffusion Language Models</a>. <span class="venue">EMNLP 2026.</span></li>
-        <li><a href="https://arxiv.org/abs/2605.17284">CLAP: Contrastive Latent-Space Prompt Optimization for End-to-End Autonomous Driving</a>. <span class="venue">arXiv preprint, 2026.</span></li>
-        <li><a href="https://www.preprints.org/manuscript/202603.2344/v1">Speculative Decoding for Multimodal Models: A Survey</a>. <span class="venue">Preprints.org, 2026.</span></li>
-        <li><a href="https://arxiv.org/abs/2603.14989">MMSpec: Benchmarking Speculative Decoding for Vision-Language Models</a>. <span class="venue">arXiv preprint, 2026.</span></li>
-        <li><a href="https://doi.org/10.1145/3696410.3714573">Harmful Terms and Where to Find Them: Measuring and Modeling Unfavorable Financial Terms and Conditions in Shopping Websites at Scale</a>. <span class="venue">Proceedings of the ACM Web Conference 2025.</span></li>
+        <li><a href="https://arxiv.org/abs/2610.29378">Right On Q: Recovering Reasoning under Quantization via Self-Generated Trajectories</a>
+          <div class="authors"><strong>Boyuan Zheng</strong>, Jing Xiong, Chenwei Wu, Hui Shen, Zesen Zhao, Hei Ting Una Chan, Xueshen Liu, Zhen Zhang, Liyue Shen, Zechun Liu, Z. Morley Mao</div>
+          <span class="venue">arXiv preprint, 2026.</span></li>
+        <li><a href="https://arxiv.org/abs/2610.23839">DiscoveryRSI: Recursively Learning to Discover Valuable Hypotheses</a>
+          <div class="authors">Jianyuan Zhong, Chenwei Wu, Zhaochen Yu, Xixian Jiang, Xuewei Li, Hao Xiao, Xilin Dai, Junyang Wang, Jiaru Zou, Zhiqing Cui, <strong>Boyuan Zheng</strong>, Jing Xiong, Zhen Zhang, Qiang Gao, Michael Morley, Luis Nakayama, Qiang Xu, Liyue Shen, Tao Gui, Leo Anthony Celi, Zhenfei Yin, Yingcheng Wu, Ling Yang</div>
+          <span class="venue">arXiv preprint, 2026.</span></li>
+        <li><a href="https://aclanthology.org/2026.emnlp-main.2415/">AtlasNLP: A Country-Aware Atlas of Dataset Representation in NLP</a>
+          <div class="authors">Joan Nwatu, Tsedeniya Solomon Amare, Longju Bai, Bontu Fufa Balcha, Zayd Bashir, Angana Borah, Zara Burzo, Yubin Choi, Naihao Deng, Samika Gupta, Michel Faloughi, Claude Kwizera, Ziqiao Ma, Cynthia Yacel Fuertes Panizo, Ellie Seehorn, Hui Shen, Jiayi Tang, Zesen Zhao, <strong>Boyuan Zheng</strong>, Rada Mihalcea</div>
+          <span class="venue">EMNLP 2026.</span></li>
+        <li><a href="https://arxiv.org/abs/2608.29528">MedCache: Efficient and Temporally Valid Memory for Longitudinal Clinical Agents</a>
+          <div class="authors">Hei Ting (Una) Chan, Chenwei Wu, Xueshen Liu, <strong>Boyuan Zheng</strong>, Liyue Shen, Jiasi Chen, Z. Morley Mao</div>
+          <span class="venue">arXiv preprint, 2026.</span></li>
+        <li><a href="https://arxiv.org/abs/2608.12745">A Cloud-Edge System for Multimodal Clinical Screening in Resource-Constrained Rural Settings</a>
+          <div class="authors">Hei Ting (Una) Chan, Chenwei Wu, Xueshen Liu, Zesen Zhao, <strong>Boyuan Zheng</strong>, Luis Filipe Nakayama, Michael G. Morley, Liyue Shen, Jiasi Chen, Z. Morley Mao</div>
+          <span class="venue">Machine Learning for Healthcare · PMLR 340, 2026.</span></li>
+        <li><a href="https://arxiv.org/abs/2607.17454">Test-Time Scaling for World Action Models via Zero-Shot Geometric Verification</a>
+          <div class="authors">Zesen Zhao, Minkyoung Cho, Hui Shen, <strong>Boyuan Zheng</strong>, Kunxiao Gao, Yulong Cao, Z. Morley Mao</div>
+          <span class="venue">arXiv preprint, 2026.</span></li>
+        <li><a href="https://arxiv.org/abs/2606.10650">Dynamic Linear Attention</a>
+          <div class="authors">Xin Wang, Hui Shen, <strong>Boyuan Zheng</strong>, Xueshen Liu, Minkyoung Cho, Zhongwei Wan, Zesen Zhao, Zhuoqing Mao, Shen Yan, Mi Zhang</div>
+          <span class="venue">ICML 2026.</span></li>
+        <li><a href="https://arxiv.org/abs/2606.10537">Prefilling-dLLM: Predictive Prefilling for Long-Context Inference in Diffusion Language Models</a>
+          <div class="authors">Jing Xiong, Qi Han, Shansan Gong, Yunta Hsieh, <strong>Boyuan Zheng</strong>, Chengyue Wu, Chaofan Tao, Chenyang Zhao, Ngai Wong</div>
+          <span class="venue">EMNLP 2026.</span></li>
+        <li><a href="https://arxiv.org/abs/2605.17284">CLAP: Contrastive Latent-Space Prompt Optimization for End-to-End Autonomous Driving</a>
+          <div class="authors">Ruiyang Zhu, Yuehan He, <strong>Boyuan Zheng</strong>, Zesen Zhao, Ahmad Chalhoub, Qingzhao Zhang, Z. Morley Mao</div>
+          <span class="venue">arXiv preprint, 2026.</span></li>
+        <li><a href="https://www.preprints.org/manuscript/202603.2344/v1">Speculative Decoding for Multimodal Models: A Survey</a>
+          <div class="authors">Yifan Zhang, Yuren Wang, Yunta Hsieh, Xin Wang, Ping Zhang, Ziyi Yang, Jianing Ma, Zesen Zhao, <strong>Boyuan Zheng</strong>, Hei Ting (Una) Chan, Jiarui Li, Xueshen Liu, Kunxiao Gao, Ruiyao Liu, Jingxuan Zhang, Junchen Li, Zhongwei Wan, Ziheng Zhang, Jing Xiong, Shatong Zhu, Hangrui Cao, Hui Shen</div>
+          <span class="venue">Preprints.org, 2026.</span></li>
+        <li><a href="https://arxiv.org/abs/2603.14989">MMSpec: Benchmarking Speculative Decoding for Vision-Language Models</a>
+          <div class="authors">Hui Shen, Xin Wang, Ping Zhang, Yunta Hsieh, Qi Han, Zhongwei Wan, Ziheng Zhang, Jingxuan Zhang, Jing Xiong, Ziyuan Liu, Yifan Zhang, Hangrui Cao, Chenyang Zhao, Mi Zhang</div>
+          <span class="venue">arXiv preprint, 2026.</span></li>
+        <li><a href="https://doi.org/10.1145/3696410.3714573">Harmful Terms and Where to Find Them: Measuring and Modeling Unfavorable Financial Terms and Conditions in Shopping Websites at Scale</a>
+          <div class="authors">Elisa Tsai, Neal Mangaokar, <strong>Boyuan Zheng</strong>, Haizhong Zheng, Atul Prakash</div>
+          <span class="venue">Proceedings of the ACM Web Conference 2025.</span></li>
       </ul>
     </section>
   </main>
