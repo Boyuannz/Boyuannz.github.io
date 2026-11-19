@@ -8,154 +8,80 @@
   <meta name="description" content="Boyuan Zheng is a Ph.D. student in Computer Science and Engineering at the University of Michigan. His work spans efficient machine learning systems, language models, multimodal models, and intelligent agents.">
   <link rel="icon" href="../favicon.svg" type="image/svg+xml">
   <style>
-:root {
-  --paper: #faf9f6;
-  --ink: #211f1d;
-  --muted: #625f5b;
-  --rule: #dbd9d3;
-  --roman: Baskerville, "Baskerville Old Face", "Times New Roman", serif;
-}
+
+:root { color-scheme: light; --serif: Baskerville, "Times New Roman", serif; }
 * { box-sizing: border-box; }
-html { scroll-padding-top: 24px; }
-body { margin: 0; color: var(--ink); background: var(--paper); font: 15px/1.65 "Helvetica Neue", Arial, sans-serif; }
-a { color: inherit; text-decoration: none; text-underline-offset: .22em; }
-a:hover, .profile-copy p a { text-decoration: underline; text-decoration-thickness: 1px; }
-a:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; }
-.skip-link { position: absolute; left: 1rem; top: -5rem; }
-.skip-link:focus { top: 1rem; }
-.masthead, main, .site-footer { width: min(88%, 1040px); margin-inline: auto; }
-.masthead { padding: clamp(64px, 9vw, 132px) 0 clamp(46px, 6vw, 84px); text-align: center; }
-h1, h2, p { margin: 0; }
-h1 { font: 400 clamp(33px, 6.4vw, 78px)/1.1 var(--roman); text-transform: uppercase; letter-spacing: .072em; }
-nav, .profile-links { display: flex; flex-wrap: wrap; gap: 12px 25px; align-items: center; }
-nav { justify-content: center; margin-top: 24px; }
-nav a, .profile-links a, .all-work, .back-top { font-size: 12px; }
-.section-rule { border-top: 1px solid var(--rule); }
-.profile { display: grid; grid-template-columns: 1fr 2.25fr; gap: 4%; padding: clamp(36px, 5vw, 72px) 0; }
-h2 { font: 400 clamp(24px, 2.6vw, 33px)/1.2 var(--roman); }
-.profile-copy { max-width: 60ch; }
-.profile-copy p + p { margin-top: .9em; }
-.profile-links { margin-top: 22px; }
-.work { padding: clamp(36px, 5vw, 68px) 0; }
-.work-heading, .site-footer { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; }
-.work-heading { margin-bottom: 26px; }
-.publication-list { list-style: none; padding: 0; margin: 0; }
-.publication-list li { display: grid; grid-template-columns: minmax(3em, 12%) 1fr auto; gap: 16px; align-items: baseline; padding: 21px 0; border-top: 1px solid var(--rule); }
-.pub-year, .pub-main p { color: var(--muted); font-size: 12px; }
-.pub-main > a { font: 400 clamp(20px, 2.2vw, 27px)/1.24 var(--roman); }
-.pub-main p { margin-top: 5px; }
-.pub-arrow { font-size: 12px; }
-.site-footer { padding: 22px 0 36px; border-top: 1px solid var(--rule); color: var(--muted); font-size: 12px; }
-@media (max-width: 640px) {
-  .profile { grid-template-columns: 1fr; gap: 20px; }
-  .publication-list li { grid-template-columns: 3em 1fr; gap: 8px; }
-  .pub-arrow { display: none; }
-  .site-footer { flex-wrap: wrap; }
+html { scroll-padding-top: 2rem; }
+body { max-width: 1480px; padding-inline: clamp(22px,3.2vw,58px); margin: auto; background: white; color: #282725; font: 400 16px/1.75 "Helvetica Neue", Arial, sans-serif; }
+a { color: inherit; text-underline-offset: .2em; text-decoration-thickness: 1px; }
+a:hover { color: #635f5a; }
+a:focus-visible { outline: 2px solid currentColor; outline-offset: 5px; }
+.skip-link { position: absolute; top: -5rem; }
+.skip-link:focus { top: .5rem; }
+header, nav, .profile-links { display: flex; align-items: center; }
+header { justify-content: space-between; gap: 2rem; padding-block: clamp(26px,3vw,44px); }
+h1, h2 { font-family: var(--serif); color: #171614; font-weight: 400; margin: 0; }
+h1 { font-size: clamp(29px,2.7vw,40px); line-height: 1.2; letter-spacing: -.035em; }
+h2 { font-size: clamp(24px,2.1vw,30px); line-height: 1.3; margin-bottom: .5em; }
+nav { gap: clamp(14px,2vw,30px); font-size: 15px; }
+nav a { text-decoration: none; }
+nav a:hover { text-decoration: underline; }
+nav .scholar { background: #171715; color: white; padding: 15px 29px; }
+main { padding-block: clamp(48px,6vw,88px) 70px; }
+.bio, .research { max-width: 660px; }
+p { margin: 0; }
+.profile-links { gap: 20px; flex-wrap: wrap; margin-top: 13px; font-size: 14px; }
+section + section { margin-top: clamp(46px,5.8vw,84px); }
+.papers { max-width: 950px; }
+.papers ul { padding-left: 1.2em; margin: 18px 0 0; }
+.papers li { padding-left: .35em; margin-bottom: 1em; }
+.venue { color: #605f5b; font-size: .9em; }
+footer { border-top: 1px solid #e7e6e2; padding-block: 24px; font-size: 13px; }
+@media (max-width: 580px) {
+  header { align-items: flex-start; flex-direction: column; gap: 16px; }
+  nav { flex-wrap: wrap; font-size: 14px; }
+  nav .scholar { padding: 6px 15px; }
+  main { padding-top: 28px; }
 }
 </style>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
-
-  <header class="masthead" id="home">
+  <header id="home">
     <h1>Boyuan Zheng</h1>
     <nav aria-label="Main navigation">
-      <a href="#about">Profile</a>
-      <a href="#work">Publications</a>
-      <a href="https://scholar.google.com/citations?user=x9AM0SQAAAAJ&amp;hl=en" target="_blank" rel="noreferrer">Scholar <span aria-hidden="true">↗</span></a>
+      <a href="#research">Research</a>
+      <a href="#publications">Publications</a>
+      <a class="scholar" href="https://scholar.google.com/citations?user=x9AM0SQAAAAJ&amp;hl=en">Google Scholar</a>
     </nav>
   </header>
-
   <main id="main">
-
-    <section class="profile section-rule" id="about" aria-labelledby="about-title">
-      <h2 id="about-title">Profile</h2>
-      <div class="profile-copy">
-        <p>I am a second-year Ph.D. student in Computer Science and Engineering at the <a href="https://cse.engin.umich.edu/">University of Michigan</a>, advised by Professor <a href="https://web.eecs.umich.edu/~zmao/">Z. Morley Mao</a>. I received my undergraduate degree in Computer Science and Data Science from Michigan.</p>
-        <p>My research spans efficient machine learning systems and their applications, including language models, multimodal models, and intelligent agents.</p>
-        <div class="profile-links">
-          <a href="https://scholar.google.com/citations?user=x9AM0SQAAAAJ&amp;hl=en" target="_blank" rel="noreferrer">Google Scholar <span aria-hidden="true">↗</span></a>
-          <a href="https://github.com/Boyuannz" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a>
-          <a href="https://www.linkedin.com/in/boyuann-umich/" target="_blank" rel="noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
-        </div>
-      </div>
+    <section class="bio" aria-label="About me">
+      <p>I’m a second-year Ph.D. student in Computer Science and Engineering at the <a href="https://cse.engin.umich.edu/">University of Michigan</a>, advised by Professor <a href="https://web.eecs.umich.edu/~zmao/">Z. Morley Mao</a>. I also studied Computer Science and Data Science at Michigan as an undergraduate.</p>
+      <div class="profile-links"><a href="https://github.com/Boyuannz">GitHub</a><a href="https://www.linkedin.com/in/boyuann-umich/">LinkedIn</a></div>
     </section>
-
-    <section class="work section-rule" id="work" aria-labelledby="work-title">
-      <div class="work-heading">
-        <h2 id="work-title">Publications</h2>
-        <a class="all-work" href="https://scholar.google.com/citations?user=x9AM0SQAAAAJ&amp;hl=en" target="_blank" rel="noreferrer">Full list <span aria-hidden="true">↗</span></a>
-      </div>
-
-      <ol class="publication-list">
-        <li>
-          <span class="pub-year">2026</span>
-          <div class="pub-main"><a href="https://arxiv.org/abs/2610.29378" target="_blank" rel="noreferrer">Right On Q: Recovering Reasoning under Quantization via Self-Generated Trajectories</a><p>arXiv preprint</p></div>
-          <span class="pub-arrow" aria-hidden="true">↗</span>
-        </li>
-        <li>
-          <span class="pub-year">2026</span>
-          <div class="pub-main"><a href="https://arxiv.org/abs/2610.23839" target="_blank" rel="noreferrer">DiscoveryRSI: Recursively Learning to Discover Valuable Hypotheses</a><p>arXiv preprint</p></div>
-          <span class="pub-arrow" aria-hidden="true">↗</span>
-        </li>
-        <li>
-          <span class="pub-year">2026</span>
-          <div class="pub-main"><a href="https://aclanthology.org/2026.emnlp-main.2415/" target="_blank" rel="noreferrer">AtlasNLP: A Country-Aware Atlas of Dataset Representation in NLP</a><p>EMNLP 2026</p></div>
-          <span class="pub-arrow" aria-hidden="true">↗</span>
-        </li>
-        <li>
-          <span class="pub-year">2026</span>
-          <div class="pub-main"><a href="https://arxiv.org/abs/2608.29528" target="_blank" rel="noreferrer">MedCache: Efficient and Temporally Valid Memory for Longitudinal Clinical Agents</a><p>arXiv preprint</p></div>
-          <span class="pub-arrow" aria-hidden="true">↗</span>
-        </li>
-        <li>
-          <span class="pub-year">2026</span>
-          <div class="pub-main"><a href="https://arxiv.org/abs/2608.12745" target="_blank" rel="noreferrer">A Cloud-Edge System for Multimodal Clinical Screening in Resource-Constrained Rural Settings</a><p>Machine Learning for Healthcare · PMLR 340</p></div>
-          <span class="pub-arrow" aria-hidden="true">↗</span>
-        </li>
-        <li>
-          <span class="pub-year">2026</span>
-          <div class="pub-main"><a href="https://arxiv.org/abs/2607.17454" target="_blank" rel="noreferrer">Test-Time Scaling for World Action Models via Zero-Shot Geometric Evaluation</a><p>arXiv preprint</p></div>
-          <span class="pub-arrow" aria-hidden="true">↗</span>
-        </li>
-        <li>
-          <span class="pub-year">2026</span>
-          <div class="pub-main"><a href="https://arxiv.org/abs/2606.10650" target="_blank" rel="noreferrer">Dynamic Linear Attention</a><p>ICML 2026</p></div>
-          <span class="pub-arrow" aria-hidden="true">↗</span>
-        </li>
-        <li>
-          <span class="pub-year">2026</span>
-          <div class="pub-main"><a href="https://arxiv.org/abs/2606.10537" target="_blank" rel="noreferrer">Prefilling-dLLM: Predictive Prefilling for Long-Context Inference in Diffusion Language Models</a><p>EMNLP 2026</p></div>
-          <span class="pub-arrow" aria-hidden="true">↗</span>
-        </li>
-        <li>
-          <span class="pub-year">2026</span>
-          <div class="pub-main"><a href="https://arxiv.org/abs/2605.17284" target="_blank" rel="noreferrer">CLAP: Contrastive Latent-Space Prompt Optimization for End-to-End Autonomous Driving</a><p>arXiv preprint</p></div>
-          <span class="pub-arrow" aria-hidden="true">↗</span>
-        </li>
-        <li>
-          <span class="pub-year">2026</span>
-          <div class="pub-main"><a href="https://www.preprints.org/manuscript/202603.2344/v1" target="_blank" rel="noreferrer">Speculative Decoding for Multimodal Models: A Survey</a><p>Preprints.org</p></div>
-          <span class="pub-arrow" aria-hidden="true">↗</span>
-        </li>
-        <li>
-          <span class="pub-year">2026</span>
-          <div class="pub-main"><a href="https://arxiv.org/abs/2603.14989" target="_blank" rel="noreferrer">MMSpec: Benchmarking Speculative Decoding for Vision-Language Models</a><p>arXiv preprint</p></div>
-          <span class="pub-arrow" aria-hidden="true">↗</span>
-        </li>
-        <li>
-          <span class="pub-year">2025</span>
-          <div class="pub-main"><a href="https://doi.org/10.1145/3696410.3714573" target="_blank" rel="noreferrer">Harmful Terms and Where to Find Them: Measuring and Modeling Unfavorable Financial Terms and Conditions in Shopping Websites at Scale</a><p>Proceedings of the ACM Web Conference 2025</p></div>
-          <span class="pub-arrow" aria-hidden="true">↗</span>
-        </li>
-      </ol>
+    <section class="research" id="research">
+      <h2>Research</h2>
+      <p>I study efficient inference for language and multimodal models. My recent work looks at how to <a href="https://arxiv.org/abs/2610.29378">recover reasoning after quantization</a> and how to <a href="https://aclanthology.org/2026.emnlp-main.426/">reuse long prompts during diffusion decoding</a>.</p>
+    </section>
+    <section class="papers" id="publications">
+      <h2>Publications</h2>
+      <ul>
+        <li><a href="https://arxiv.org/abs/2610.29378">Right On Q: Recovering Reasoning under Quantization via Self-Generated Trajectories</a>. <span class="venue">arXiv preprint, 2026.</span></li>
+        <li><a href="https://arxiv.org/abs/2610.23839">DiscoveryRSI: Recursively Learning to Discover Valuable Hypotheses</a>. <span class="venue">arXiv preprint, 2026.</span></li>
+        <li><a href="https://aclanthology.org/2026.emnlp-main.2415/">AtlasNLP: A Country-Aware Atlas of Dataset Representation in NLP</a>. <span class="venue">EMNLP 2026.</span></li>
+        <li><a href="https://arxiv.org/abs/2608.29528">MedCache: Efficient and Temporally Valid Memory for Longitudinal Clinical Agents</a>. <span class="venue">arXiv preprint, 2026.</span></li>
+        <li><a href="https://arxiv.org/abs/2608.12745">A Cloud-Edge System for Multimodal Clinical Screening in Resource-Constrained Rural Settings</a>. <span class="venue">Machine Learning for Healthcare · PMLR 340, 2026.</span></li>
+        <li><a href="https://arxiv.org/abs/2607.17454">Test-Time Scaling for World Action Models via Zero-Shot Geometric Evaluation</a>. <span class="venue">arXiv preprint, 2026.</span></li>
+        <li><a href="https://arxiv.org/abs/2606.10650">Dynamic Linear Attention</a>. <span class="venue">ICML 2026.</span></li>
+        <li><a href="https://arxiv.org/abs/2606.10537">Prefilling-dLLM: Predictive Prefilling for Long-Context Inference in Diffusion Language Models</a>. <span class="venue">EMNLP 2026.</span></li>
+        <li><a href="https://arxiv.org/abs/2605.17284">CLAP: Contrastive Latent-Space Prompt Optimization for End-to-End Autonomous Driving</a>. <span class="venue">arXiv preprint, 2026.</span></li>
+        <li><a href="https://www.preprints.org/manuscript/202603.2344/v1">Speculative Decoding for Multimodal Models: A Survey</a>. <span class="venue">Preprints.org, 2026.</span></li>
+        <li><a href="https://arxiv.org/abs/2603.14989">MMSpec: Benchmarking Speculative Decoding for Vision-Language Models</a>. <span class="venue">arXiv preprint, 2026.</span></li>
+        <li><a href="https://doi.org/10.1145/3696410.3714573">Harmful Terms and Where to Find Them: Measuring and Modeling Unfavorable Financial Terms and Conditions in Shopping Websites at Scale</a>. <span class="venue">Proceedings of the ACM Web Conference 2025.</span></li>
+      </ul>
     </section>
   </main>
-
-  <footer class="site-footer">
-    <a class="wordmark" href="#home">Boyuan Zheng</a>
-    <p>University of Michigan · Computer Science and Engineering</p>
-    <a href="#home" class="back-top">Back to top ↑</a>
-  </footer>
+  <footer><a href="#home">Back to top ↑</a></footer>
 </body>
 </html>
